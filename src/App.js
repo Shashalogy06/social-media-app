@@ -1,12 +1,11 @@
 import React from "react";
 import "./App.css";
-import HomePage from "./components/home/HomePage";
+import NavBar from "./components/layout/NavBar";
 
 function App() {
   return (
     <div className="App">
-      <h1>Social Media App</h1>
-      <HomePage></HomePage>
+      <NavBar></NavBar>
     </div>
   );
 }
