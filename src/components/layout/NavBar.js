@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 export class NavBar extends Component {
 
   onClick = e =>{
@@ -8,12 +9,12 @@ export class NavBar extends Component {
 
   render() {
     return (
-      <nav className="navbar bg-dark">
-      <h1>Social Media App</h1>
-      <button type="button" className="btn btn-primary" onClick={this.onClick}>
+      <nav className="navbar bg-dark" style={{ display: "inline-block" }}>
+      <h1 style={{ float: "left" }}>Social Media App</h1>
+      <button type="button" className="btn btn-primary" style={{ float: "right" }} onClick={this.onClick}>
         SignUp
       </button>
-      <button type="button" className="btn btn-light " onClick={this.onClick}>
+      <button type="button" className="btn btn-light " style={{ float: "right" }} onClick={this.onClick}>
         SignIn
       </button>
     </nav>
