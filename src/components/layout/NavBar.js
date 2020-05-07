@@ -1,17 +1,25 @@
-import React from "react";
+import React, { Component } from 'react'
 
-function NavBar() {
-  return (
-    <nav className="navbar bg-dark">
+export class NavBar extends Component {
+
+  onClick = e =>{
+    this.props.signInorSignUp(e.target.innerHTML);
+  }
+
+  render() {
+    return (
+      <nav className="navbar bg-dark">
       <h1>Social Media App</h1>
-      <button type="button" class="btn btn-primary ">
+      <button type="button" className="btn btn-primary" onClick={this.onClick}>
         SignUp
       </button>
-      <button type="button" class="btn btn-light ">
+      <button type="button" className="btn btn-light " onClick={this.onClick}>
         SignIn
       </button>
     </nav>
-  );
+    )
+  }
 }
 
 export default NavBar;
+
